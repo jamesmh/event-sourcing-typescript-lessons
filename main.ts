@@ -4,8 +4,10 @@
  * interact with and uncomment to view results, etc.
  */
 
-//import './functional'
-import './oop'
+import './lesson1-functional/index'
+// import './lesson2-oop/index'
+//import './lesson3-projections-per-stream/index'
+//import './lesson4-testing/index'
 
 
 
