@@ -12,7 +12,7 @@
  * Note: Any code comments begining with "#### Action ####" means it's code that you can uncomment to interact with 😊.
  */
 
- // Utils
+// Utils
 import { v4 as uuid } from 'uuid'
 function now(): TimeStamp {
     return new Date().getTime();
@@ -30,12 +30,12 @@ type PurchaseItemCollection = PurchaseItem[];
 type PurchaseId = UUID;
 
 // Domain Events
-type PurchaseRequested = DomainEvent & { purchaseId: PurchaseId, items: PurchaseItemCollection}
-type PurchaseSuccessful = DomainEvent & { purchaseId: PurchaseId};
+type PurchaseRequested = DomainEvent & { purchaseId: PurchaseId, items: PurchaseItemCollection }
+type PurchaseSuccessful = DomainEvent & { purchaseId: PurchaseId };
 type PurchaseRefunded = DomainEvent & { purchaseId: PurchaseId, amount: number }
 
 // Primitive event store: By storing each event as a serialized JSON string we will
-// simulate having to serilaize our events and send it to an event store over the network.
+// simulate having to serialize our events and send it to an event store over the network.
 let eventStore: JSONString[] = [];
 
 // *************
@@ -124,8 +124,8 @@ class PurchaseCountsProjection {
     // the type in order to decide what effect that event
     // has against our projection.
     apply(events: Meta[]): void {
-        for(const event of events) {
-            switch(event.type) {
+        for (const event of events) {
+            switch (event.type) {
                 case nameof<PurchaseRequested>():
                     this.Requests++;
                     break;
@@ -138,8 +138,8 @@ class PurchaseCountsProjection {
 }
 
 // Let's try it by making 2 more purchase requests:
-const requested2: PurchaseRequested = { eventId: uuid(), at: now(), purchaseId: uuid(), items: [ { itemId: uuid(), name: 'Monitor', amount: 200.00  } ] };
-const requested3: PurchaseRequested = { eventId: uuid(), at: now(), purchaseId: uuid(), items: [ { itemId: uuid(), name: 'Monitor', amount: 199.00  } ] };
+const requested2: PurchaseRequested = { eventId: uuid(), at: now(), purchaseId: uuid(), items: [{ itemId: uuid(), name: 'Monitor', amount: 200.00 }] };
+const requested3: PurchaseRequested = { eventId: uuid(), at: now(), purchaseId: uuid(), items: [{ itemId: uuid(), name: 'Monitor', amount: 199.00 }] };
 append(requested2, nameof<PurchaseRequested>());
 append(requested3, nameof<PurchaseRequested>());
 
