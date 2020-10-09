@@ -72,7 +72,7 @@ const notCorrect: PurchaseRefunded = JSON.parse(eventStore[0]);
 
 // #### Action ####
 // The output here WON'T have the shape of the PurchaseRefunded!
-// (We never even created an event of that type!)
+// (We never even created an event of that type - but this compiles and runs fine!)
 // 👇
 // ################
 
