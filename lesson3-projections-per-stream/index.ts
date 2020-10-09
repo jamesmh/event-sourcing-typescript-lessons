@@ -101,12 +101,6 @@ export class PurchaseOverviewProjection {
     private applyPurchaseRefunded(event: PurchaseRefunded) {
         this.WasRefunded = true;
     }
-
-    // Note: imagine that instead of changing the in-memory properties
-    // of this object with the `apply` methods we were issuing SQL statements to update
-    // a DB record instead?
-    //
-    // Or, doing the same with a document DB?
 }
 
 // Let's run the projection for each of our purchase "streams"
