@@ -1,0 +1,23 @@
+{
+  "name": "event-sourcing-typescript",
+  "version": "1.0.0",
+  "description": "Exploring the basics of event sourcing in TypeScript",
+  "main": "main.js",
+  "dependencies": {
+    "@types/uuid": "^8.3.0",
+    "typescript": "^4.0.3",
+    "uuid": "^8.3.1"
+  },
+  "devDependencies": {
+    "@types/ts-nameof": "^4.2.1",
+    "ts-nameof": "^5.0.0",
+    "ttypescript": "^1.5.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ttsc main.ts",
+    "run": "ttsc main.ts && node main.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
