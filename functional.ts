@@ -147,7 +147,7 @@ const projection = new PurchaseCountsProjection();
 projection.apply(getAllEvents());
 
 // #### Action ####
-// We should now have 3 requested purchases and 1 sucessful! 
+// We should now have 3 requested purchases and 1 sucessful! Cool stuff!
 // 👇
 // ################
 
