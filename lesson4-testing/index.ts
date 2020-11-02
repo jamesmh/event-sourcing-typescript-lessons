@@ -1,7 +1,7 @@
 ﻿/**
  * How do we test event sourced systems?
  * 
- * It's actually fairly straightfoward - and this technique exposes how focusing
+ * It's actually somewhat straightforward - and this technique exposes how focusing
  * on the domain events rather than state (as our industry is so often doing)
  * makes our software easier to read, work with from a domain semantics POV, to test, etc.
  * 
