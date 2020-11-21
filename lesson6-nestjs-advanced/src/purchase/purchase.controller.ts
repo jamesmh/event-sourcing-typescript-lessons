@@ -43,7 +43,7 @@ export class PurchaseController {
         };
         html += `</ul>`;
 
-        html+= renderCreatePurchaseForm();
+        html += renderCreatePurchaseForm();
 
         return html;
     }
