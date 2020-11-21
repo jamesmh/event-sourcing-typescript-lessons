@@ -26,6 +26,8 @@ class AllPurchasesProjection {
 }
 
 // Singleton for the purpose of our sample application.
+// In a prod setting you would want to store/cache this in a cache, DB, etc.
+// Also, you might want to consider using DI to inject the projection vs. an in-memory singleton.
 export const allPurchasesProjection = new AllPurchasesProjection();
 
 @EventsHandler(PurchaseRefunded)
