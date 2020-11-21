@@ -23,8 +23,8 @@ class AvgCostProjection {
 }
 
 // As sample app, we create a singleton instance of the projection for the entire app to use.
-// You can imaging that a real "singleton" would be a data store of some kind. So instead
-// of modifying in-memory objects, we'd be issuing SQL statements to update the projection.
+// In a prod setting this would be stored to a database/store. So instead
+// of modifying in-memory objects, we'd be issuing SQL statements (etc.) to update the projection.
 export const avgCostProjection: AvgCostProjection = new AvgCostProjection();
 
 @EventsHandler(PurchaseMade)
