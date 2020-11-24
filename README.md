@@ -25,7 +25,7 @@ There are two pages that use event sourcing:
 - Add event store persistance (to a file I suppose) + persist projections too
 - Add ability for application to replay projections on startup
 - Add support for optimistic concurrency?
-- ??
+- Example using EventStoreDB?
 
 
 
