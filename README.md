@@ -7,7 +7,7 @@ To run the code in your terminal once a lesson(s) is selected:
 1. `npm install`
 2. `npm run run`
 
-### About Lesson 5
+### About Lesson 5+
 
 Lesson 5 is a stand-alone nestjs project. Take a look at the `./lesson5-nestjs-mvc/src/purchase` directory for the goodies.
 
